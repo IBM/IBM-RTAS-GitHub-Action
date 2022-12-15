@@ -1,2 +1,2 @@
-# IBM-RTAS-GitHub-Action
-These are gitHub Action workflow for RTAS
+# devopsauto-testserver-actions
+These are gitHub Action workflow for IBM DevOps Automation Test Server
