@@ -1,0 +1,23 @@
+name: Rational Test Automation Server
+
+on: workflow_dispatch
+
+jobs:
+    OTS-Action:
+        runs-on: self-hosted
+        name: Rational Test Automation Server
+        steps:
+         - name: Execute Test
+           uses: IBM/IBM-RTAS-GitHub-Action@main
+           with:
+            serverUrl: 
+            offlineToken: 
+            teamspace: 
+            project: 
+            branch: 
+            assetId: 
+            environment: 
+            datasets:
+            labels: 
+            secretsCollection: 
+            variables: 

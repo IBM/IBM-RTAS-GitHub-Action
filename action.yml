@@ -1,0 +1,42 @@
+name: 'Rational Test Automation Server GitHub Action'
+description: 'Execute Rational Test Automation Server hosted tests from GitHub Actions workflows.'
+branding:
+  icon: 'check-square'
+  color: 'purple'
+inputs:
+  serverUrl:
+    description: 'Rational Test Automation Server URL'
+    required: true
+  offlineToken:
+    description: 'Rational Test Automation Server Offline Token'
+    required: true
+  teamspace:
+    description: 'Team Space name'
+    required: true
+  project:
+    description: 'Project name'
+    required: true
+  branch:
+    description: 'Branch name in which the test exists'
+    required: true
+  assetId:
+    description: 'AssetId of the test in Rational Test Automation Server.'
+    required: true
+  environment:
+    description: 'Optional. Test environment corresponding to the test. Mandatory to input the value if you want to run API test.'  
+    required: false
+  datasets:
+    description: 'Optional. Comma (,) delimited values of datasets for the job to run, For example: source:replacement;source:replacement'
+    required: false
+  labels:
+    description: 'Optional. Labels corresponding to the test. For example: label1, label2'
+    required: false   
+  secretsCollection:
+    description: 'Optional. Secrets collection name for the job to run.'
+    required: false     
+  variables:
+    description: 'Optional. Variables corresponding to the test. You must enter the variables in the format: name_of_the_variable=value_of_the_variable'
+    required: false   
+runs:
+  using: 'node16'
+  main: 'dist/index.js' 
